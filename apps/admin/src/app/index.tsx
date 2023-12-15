@@ -5,7 +5,7 @@ import { useSwitch } from "@/hooks/useSwitch";
 
 function App(): JSX.Element {
   const log = useSwitch();
-  console.log(log, "log");
+
   return (
     <div className="container">
       <h1 className="title">
