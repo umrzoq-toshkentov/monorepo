@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./styles.css";
 import { CounterButton, Link } from "@repo/ui";
+import { useSwitch } from "@/hooks/useSwitch";
 
 function App(): JSX.Element {
+  const log = useSwitch();
+  console.log(log, "log");
   return (
     <div className="container">
       <h1 className="title">
@@ -13,7 +16,7 @@ function App(): JSX.Element {
       <p className="description">
         Built With{" "}
         <Link href="https://turbo.build/repo" newTab>
-          Turborepo
+          Turborepo {log}
         </Link>
         {" & "}
         <Link href="https://vitejs.dev/" newTab>

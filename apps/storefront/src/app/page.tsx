@@ -1,4 +1,4 @@
-import { log } from "@repo/logger";
+import { useLog } from "@repo/hook";
 import { CounterButton, Link } from "@repo/ui";
 
 export const metadata = {
@@ -6,13 +6,13 @@ export const metadata = {
 };
 
 export default function Store(): JSX.Element {
-  log("Hey! This is the Store page.");
-
+  const log = useLog();
+  console.log(log);
   return (
     <div className="container">
       <h1 className="title">
         Store <br />
-        <span>Kitchen Sink</span>
+        <span>Kitchen Sink{log.a}</span>
       </h1>
       <CounterButton />
       <p className="description">
